@@ -14,6 +14,7 @@
     <h1>Meine Überschrift ersten Grades</h1>
     <h2>Meine Überschrift zweiten Grades</h2>
     <!-- ab h3 kann mehrfach verwendet werden -->
+    <h3>Meine Überschrift dritten Grades</h3>
     <h4>Meine Überschrift vierten Grades</h4>
     <h5>Meine Überschrift fünften Grades</h5>
     <h6>Meine Überschrift sechsten Grades</h6>
@@ -22,6 +23,7 @@
     <p>Lorem ipsum dolor <b>sdfsadf</b> sit amet consectetur, <strong>asdfsadf</strong> adipisicing elit. Saepe, porro.</p>
     <p>Lorem <em>ipsum</em> dolor sit amet <i>consectetur adipisicing</i> elit. Autem doloribus <br> neque evenietpariatur, <mark>earum laborum sdfsadf</mark> error ipsa delectus distinctio. Possimus, <span>unde</span> modi consectetur rerum voluptates similique id porro itaque architecto <del>non eos incidunt aliquid suscipit</del>. Atque quibusdam totam minima consectetur eligendi <sub>similique perferendis omnis</sub> libero est, placeat reprehenderit repellat optio necessitatibus molestias ducimus expedita ratione provident iste corporis iure. Possimus illum, deleniti veritatis, quasi architecto facere labore ipsum optio doloremque eligendi reiciendis voluptatum numquam tenetur aliquam perferendis dignissimos laudantium magni? Rerum alias magni illo quia minima harum nesciunt tenetur incidunt, debitis qui facere dolorem, ducimus earum in. Perferendis, iste odit!</p>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In rerum voluptas ad eos adipisci, atque aliquam animi praesentium, deleniti nobis labore dolorum libero minus at aliquid natus omnis saepe corporis aspernatur assumenda consectetur. Similique tenetur delectus ipsa alias, accusantium suscipit eos adipisci et repudiandae? Voluptatem perspiciatis nostrum, eum sint porro saepe neque quidem reiciendis excepturi molestias eaque autem nam ipsa facere, animi qui inventore? Corrupti molestiae quod libero, nemo in aliquam vero deserunt nostrum modi aut reprehenderit quidem illo cupiditate molestias eveniet, ratione qui voluptates dolorem, eos debitis quaerat asperiores at distinctio. Explicabo mollitia consequatur facere molestiae repellendus culpa distinctio.</p>
+    <blockquote>Ich bin ein Zitat</blockquote>
     <!-- https://www.w3schools.com/html/html_formatting.asp -->
 
     <!-- Links -->
@@ -84,13 +86,93 @@
       </tr>
     </table>
 
+    <br>
+    <hr>
+    <br>
+
     <!-- Bildern -->
     <!-- <img src="https://alumni.sae.edu/wp-content/uploads/2016/01/Edit_Area_2.jpeg" alt=""> -->
     <!-- absolute und relative pfade -->
 
     <!-- offen Bildgröße !!!!! -->
-    <img src="images/sae-img.jpg" alt="">
-    
+    <!-- mit '../' -> eine Ebene zurück -->
+    <!-- width="500px" fixe Breite durch absoluten Wert -->
+    <!-- width="100%" dynamische Breite durch relativer Wert -->
+    <img width="500" src="images/sae-img.jpg" alt="">
+
+    <!-- responsive bilder -->
+    <img src="/images/kanzi-teaser-image-apple.png"
+        srcset="/images/kanzi-teaser-image-apple-large.png 1200w,
+                /images/kanzi-teaser-image-apple-medium.png 960w,
+                /images/kanzi-teaser-image-apple-small.png  480w">
+
+    <br>  
+    <br>
+
+    <!-- https://www.w3schools.com/tags/tag_video.asp -->
+    <!-- autoplay nur möglich wenn video gemuted (Abhängig vom Client) -->
+    <video
+      controls
+      muted
+      loop
+      preload="none"
+      width="500"
+      poster="images/video-poster.png">
+      <source src="https://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <!-- <source src="https://media.w3.org/2010/05/sintel/trailer.ogg" type="video/ogg"> -->
+    </video>
+
+    <audio src=""></audio>
+
+
+    <iframe width="500" height="200" src="index.html" frameborder="0"></iframe>
+    <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/ZYroqiS5vTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <iframe width="200" height="500" src="https://webdesign-development.org/dh-facharbeit.pdf" frameborder="0"></iframe>
+
+    <br>
+    <br>
+
+    <!-- https://www.w3schools.com/html/html_form_input_types.asp -->
+    <form action="">
+      <fieldset>
+        <label for="name">Deine Vorname:</label>
+        <br>
+        <input id="name" size="50" name="name" type="text" placeholder="Dein Name">
+        <br>
+        <label for="email">Deine Vorname:</label>
+        <br>
+        <input id="email" size="50" name="email" type="email" placeholder="Deine Email">
+      </fieldset>
+      <br>
+      <label for="text">Dein Text:</label>
+      <br>
+      <textarea id="text" name="text" cols="40" rows="10">Dein Text</textarea>
+      <br>
+      <!-- type="number" -> min="6" max="99" -->
+      <label for="password">Dein Passswort:</label>
+      <br>
+      <input id="password" type="password" placeholder="Dein Paswort">
+      <br>
+      <label for="cars">Wähle ein Auto:</label>
+      <br>
+      <select name="cars" id="cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </select>
+      <br>
+      <input id="newsletter" type="checkbox">
+      <label for="newsletter">Newsletter abonieren.</label>
+      <br>
+      <label for="age">Newsletter abonieren.</label>
+      <input id="age" name="phone" type="number" size="50" placeholder="Dein Alter">
+      <br>
+      <button type="submit">Absenden</button>
+    </form>
+
+    <br>
+    <br>
 
   </body>
 </html>
