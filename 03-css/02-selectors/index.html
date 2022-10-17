@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <style>
+    /* tag selector */
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+    } /* tag selector END */
+
+    /* Vererbungen */
+    div div a {
+      color: red
+    }
+
+    a {
+      color: blue
+    } /* Vererbungen END */
+
+    /* IDs */
+    /* Selektor für HTML ELemente mit IDs ist die Raut (#) */
+    #meine-id {
+      background-color: blue;
+    } /* IDs END*/
+
+    /* Classes */
+    /* Selektor für HTML ELemente mit Classes ist der Punkt (.) */
+    .meine-klasse {
+      background-color: blueviolet;
+    } /* Classes END */
+
+    /* Mehrere Klassen */
+    .btn {
+      width: 100px;
+      height: 100px;
+      color: white
+    }
+    .refresh {
+      background-color: blue;
+    }
+    .save {
+      background-color: green;
+    }
+    .delete {
+      background-color: red;
+    } /* Mehrere Klassen END */
+
+    /* child selectors */
+    /* https://css-tricks.com/almanac/selectors/n/nth-child/ */
+    /* > explizite Selektion von Kind-Elementen */
+    ul > li {
+      /* display: inline-block; */
+    }
+
+    ul li:nth-child(odd) {
+      background-color: #111111;
+      color: white
+    }
+
+    /* first-child     */
+    ul li:first-child {
+      background-color: red;
+      color: white
+    }
+
+    /* nth-child */
+    /* ul li:nth-child(4) {
+      background-color: yellow;
+      color: white
+    } */
+
+    ul li:nth-child(4n - 2) {
+      background-color:coral;
+      color: white
+    }
+
+    /* child selectors END */
+
+    /* attribute selectors */
+    [href="https://google.com"] {
+      background-color: blue;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
+    /* attribute selectors END*/
+    [title~="Google"] {
+      background-color: red;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
+    [href^="https://f"] {
+      background-color: yellow;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
+    [href^="https://f"] {
+      background-color: yellow;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
+    [href*="://"] {
+      background-color: crimson;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- tag selector -->
+  <div></div>
+
+  <!-- Vererbungen -->
+  <div>
+    <div>
+      <a href="">Link</a>
+    </div>
+  </div>
+  
+  <!-- IDs sind unique! -->
+  <div id="meine-id"></div>
+
+  <!-- Classes sind dafür da mehrfach vwendet zu werden -->
+  <div class="meine-klasse"></div>
+  <div class="meine-klasse"></div>
+  <div class="meine-klasse"></div>
+
+  <!-- Werwendung mehrerer Klassen -->
+  <button class="btn refresh">Refresh</button>
+  <button class="btn save">Speichern</button>
+  <button class="btn delete">Löschen</button>
+
+  <!-- child selectors -->
+  <ul>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+    <li>List Item</li>
+  </ul>
+
+  <!-- attribute selectors -->
+  <a href="https://google.com" title="Link zu Google">Google</a>
+  <a href="https://facebook.com" title="Link zu Facebook">Facebook</a>
+
+</body>
+</html>
