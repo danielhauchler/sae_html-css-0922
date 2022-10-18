@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectors</title>
+  <style>
+    /* tag selector */
+    div {
+      width: 500px;
+      height: 500px;
+      background-color: aqua;
+    } /* tag selector END */
+
+    /* Vererbungen */
+    /* höhere Relevanz */
+    div div a {
+      color: red
+    }
+    /* als dieses */
+    a {
+      color: blue
+    } /* Vererbungen END */
+
+    /* IDs */
+    /* Selektor für HTML ELemente mit IDs ist die Raut (#) */
+    #meine-id {
+      background-color: blue;
+    } /* IDs END*/
+
+    /* Classes */
+    /* Selektor für HTML ELemente mit Classes ist der Punkt (.) */
+    /* Classes können auf mehrer Elemente angewendet werden */
+    .meine-klasse {
+      background-color: blueviolet;
+    } /* Classes END */
+
+    /* Mehrere Klassen */
+    .btn {
+      width: 100px;
+      height: 100px;
+      color: white
+    }
+    .refresh {
+      background-color: blue;
+    }
+    .save {
+      background-color: green;
+    }
+    .delete {
+      background-color: red;
+    } /* Mehrere Klassen END */
+
+  </style>
+</head>
+<body>
+
+  <!-- tag selector -->
+  <div></div>
+
+  <!-- Vererbungen -->
+  <div>
+    <div>
+      <a href="">Link</a>
+    </div>
+  </div>
+  
+  <!-- IDs sind unique! -->
+  <div id="meine-id"></div>
+
+  <!-- Classes sind dafür da mehrfach vwendet zu werden -->
+  <div class="meine-klasse"></div>
+  <div class="meine-klasse"></div>
+  <div class="meine-klasse"></div>
+
+  <!-- Werwendung mehrerer Klassen -->
+  <button class="btn refresh">Refresh</button>
+  <button class="btn save">Speichern</button>
+  <button class="btn delete">Löschen</button>
+
+</body>
+</html>

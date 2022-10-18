@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    
+    body {
+      margin: 0;
+    }
+
+    div {
+      display: inline-block;
+      /* beachte umbruch im HTML */
+      width: 32%;
+      height: auto;
+      background-color: aquamarine;
+      border: 10px solid black;
+      padding: 20px;
+      /* margin: 50px; */
+      /* padding und border gehören zur Box */
+      box-sizing: border-box;
+      /* padding und border werden auf die Breite der Box hinzuaddiert */
+      box-sizing: unset;
+    }
+
+    p {
+      padding: 10px;
+    }
+
+    #box {
+      display: block;
+      /* width: 200px; */
+      height: 200px;
+      background: blueviolet;
+      color: white;
+      
+      padding-top: 50px; 
+      padding-right: 40px;
+      padding-bottom: 30px;
+      padding-left: 20px;
+      padding: 50px 40px 30px 20px;
+      padding: 50px 20px;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box">
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia ad rem minus ducimus odit! Nisi, et illum dolorum assumenda eos facilis ea! Quas omnis minima nobis ratione vero ipsum nostrum asperiores nam labore fuga. Ab doloremque ratione, quis, expedita fugiat dolorum nihil fugit, porro at obcaecati repellendus hic reprehenderit. Error!</p>
+  </div>
+  <div>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+  </div>
+  <div>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+  </div>
+  <div>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+    <p> aliquam omnis voluptates incidunt tempore sequi voluptatem quia repellat animi a, suscipit, labore, maxime facilis? Laborum id alias nostrum! Doloribus possimus, magnam ad, illum, facilis officiis autem maiores est delectus molestias quaerat facere recusandae iure voluptatem quasi repudiandae architecto beatae magni corrupti! Aliquid harum excepturi sit suscipit modi eveniet sequi minus illo velit iste, rem accusamus, fugiat odio nesciunt, porro eius ullam atque totam magnam! Ipsum optio distinctio nobis neque officia magni nulla doloremque beatae aliquam quaerat, est atque nesciunt! Cum consequuntur modi laudantium et necessitatibus eum exercitationem?</p>
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+        <a href="#">Nav Item</a>
+      </li>
+      <li>
+        <a href="#">Nav Item</a>
+      </li>
+    </ul>
+  </nav>
+</body>
+</html>

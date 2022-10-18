@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PSeudo Selectors</title>
+  <style>
+    body > a {
+      background-color:blue;
+      color: white;
+      margin: 30px;
+      padding: 30px;
+      font-size: 30px;
+      display: inline-block;
+    }
+
+    input {
+      background-color:blue;
+      color: white;
+      margin: 50px;
+      padding: 20px;
+      font-size: 30px;
+      display: inline-block;
+    }
+
+    /* mouse befindet sich auf dem Element */
+    a:hover {
+      background-color:blueviolet;
+    }
+    /* Bei Mouse Klick (Key-Down)*/
+    a:active {
+      background-color:aqua;
+    }
+    a:focus {
+      background-color: brown;
+    }
+    /* Zustand bereits besuchter Links */
+    a:visited {
+      /* ... */
+    }
+
+    input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: white;
+    }
+    input:focus {
+      background-color: brown;
+    }
+
+    #my-form:focus-within {
+      outline: 3px solid #333;
+    }
+
+    p:target {
+      color: red;
+    }
+
+  </style>
+</head>
+<body>
+  <a href="#">Klick mich!</a>
+
+  <form id="my-form" action="">
+    <label for="vorname">Vorname
+      <input id="vorname" name="text" type="text" placeholder="Dein Vorname" autofocus>
+    </label>
+    <br>
+    <label for="nachname">Vorname
+      <input id="nachname" name="text" type="text" placeholder="Dein Nachname">
+    </label>
+  </form>
+
+  <ul>
+    <li><a href="#item1">Text Item 1</a></li>
+    <li><a href="#item2">Text Item 2</a></li>
+    <li><a href="#item3">Text Item 3</a></li>
+  </ul>
+  
+  <section>
+    <p id="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat fugit laborum. Illo consequatur quaerat nesciunt voluptatum repudiandae, quos, minima dicta possimus maiores ab hic sapiente veritatis, corporis natus unde?</p>
+    <p id="item2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat fugit laborum. Illo consequatur quaerat nesciunt voluptatum repudiandae, quos, minima dicta possimus maiores ab hic sapiente veritatis, corporis natus unde?</p>
+    <p id="item3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat fugit laborum. Illo consequatur quaerat nesciunt voluptatum repudiandae, quos, minima dicta possimus maiores ab hic sapiente veritatis, corporis natus unde?</p>
+  </section>
+
+</body>
+</html>

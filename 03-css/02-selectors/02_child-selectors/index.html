@@ -14,10 +14,11 @@
     } /* tag selector END */
 
     /* Vererbungen */
+    /* höhere Relevanz */
     div div a {
       color: red
     }
-
+    /* als dieses */
     a {
       color: blue
     } /* Vererbungen END */
@@ -30,6 +31,7 @@
 
     /* Classes */
     /* Selektor für HTML ELemente mit Classes ist der Punkt (.) */
+    /* Classes können auf mehrer Elemente angewendet werden */
     .meine-klasse {
       background-color: blueviolet;
     } /* Classes END */
@@ -57,29 +59,46 @@
       /* display: inline-block; */
     }
 
-    ul li:nth-child(odd) {
-      background-color: #111111;
-      color: white
+    nav ul {
+
+    }
+    /* vs. child selector */
+    nav > ul {
+      /* css block */
     }
 
-    /* first-child     */
+    /* first-child */
     ul li:first-child {
       background-color: red;
       color: white
     }
 
-    /* nth-child */
+    /* each second child */
+    /* Beispiel: Liste mit wechselnden Farben der Rows */
+    ul li:nth-child(odd) {
+      background-color: #111111;
+      color: white
+    }
+
+    /* :nth-child */
     /* ul li:nth-child(4) {
       background-color: yellow;
       color: white
     } */
 
-    ul li:nth-child(4n - 2) {
+    /* :nth-child('interval'n und 'startposition') */
+    ul li:nth-child(4n - 1) {
       background-color:coral;
       color: white
-    }
+    } /* child selectors END */
 
-    /* child selectors END */
+    /* Repräsentiert ein Element mit einem Attribut attr. */
+    [href] {
+      background-color:darkslategrey;
+      color: white;
+      font-size: 24px;
+      padding: 15px;
+    }
 
     /* attribute selectors */
     [href="https://google.com"] {
@@ -150,6 +169,29 @@
     <li>List Item</li>
     <li>List Item</li>
   </ul>
+
+  <div>
+    <div>
+      <section>
+        <div>
+          <nav>
+            <ul>
+              <li>
+                <a href=""></a>
+              </li>
+            </ul>
+            <div>
+              <ul>
+                <li>
+                  <a href=""></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </div>
+  </div>
 
   <!-- attribute selectors -->
   <a href="https://google.com" title="Link zu Google">Google</a>

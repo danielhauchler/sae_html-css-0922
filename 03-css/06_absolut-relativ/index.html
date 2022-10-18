@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolut & Relativ</title>
+  <style>
+    #wrapper {
+      position: relative;
+      width: 960px;
+      height: 100vh;
+      margin: 0 auto;
+      border: 2px solid black
+    }
+    .teaser {
+      width: 400px;
+      height: 500px;
+      background-color: aqua;
+      margin: 50px;
+    }
+    .badge {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background-color:blueviolet;
+    }
+  </style>
+</head>
+<body>
+    <div id="wrapper">
+      <div class="teaser">
+        <div class="badge"></div>
+      </div>
+    </div>
+</body>
+</html>
