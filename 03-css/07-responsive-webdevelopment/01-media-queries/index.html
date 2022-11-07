@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0
+    }
+
+    .container {
+      width: 100%;
+      height: 100vh;
+      margin: 0 auto;
+      background-color: blueviolet;
+    }
+
+    p {
+      color: white;
+      margin: 0 10px;
+    }
+
+    @media (max-width: 767px) {
+
+      .container {
+        width: 460px;
+      }
+
+    }
+
+    @media (min-width: 768px) {
+
+      .container {
+        width: 740px;
+      }
+
+    }
+
+    @media (min-width: 960px) {
+
+      .container {
+        width: 940px;
+      } 
+
+    }
+
+    @media (min-width: 1200px) {
+
+      .container {
+        width: 1180px;
+      } 
+
+    }
+
+    @media print {
+      p {
+        color: red;
+      } 
+    }
+
+    @media (orientation: landscape) {
+      .container {
+        background-color: brown;
+      }
+    }
+
+    @media (orientation: portrait) {
+      .container {
+        background-color:darkgoldenrod;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis qui, ad quas magni eveniet facere modi. Sapiente neque ipsam, praesentium unde vitae earum corrupti perspiciatis laborum cupiditate, facere labore magnam.</p>
+  </div>
+</body>
+</html>

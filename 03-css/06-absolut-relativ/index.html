@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolut & Relativ</title>
+  <style>
+    #topbar {
+      z-index: 3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background-color: black;
+    }
+
+    #topbar ul {
+    
+    }
+
+    #topbar ul li {
+      display: inline-block
+    }
+
+    #topbar ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 5px;
+      font-size: 20px;
+    }
+
+    #topbar ul li a:hover {
+      text-decoration: underline;
+    }
+
+    #wrapper {
+      position: relative;
+      width: 960px;
+      height: 200vh;
+      margin: 0 auto;
+      border: 2px solid black;
+      margin-top: 60px;
+    }
+    .teaser {
+      width: 400px;
+      height: 500px;
+      background-color: aqua;
+      margin: 50px;
+    }
+    .badge {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .badge-1 {
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color:blueviolet;
+    }
+
+    .badge-2 {
+      z-index: 2;
+      top: 0;
+      right: 0;
+      background-color:aquamarine;
+    }
+
+    #circle {
+      z-index: 4;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 50%;
+      width: 500px;
+      height: 500px;
+      background-color: chartreuse;
+      border-radius: 50%
+    }
+  </style>
+</head>
+<body>
+    <head>
+      <nav id="topbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </head>
+    <div id="wrapper">
+      <div class="teaser">
+        <div class="badge badge-1"></div>
+        <div class="badge badge-2"></div>
+      </div>
+    </div>
+    <div id="circle"></div>
+</body>
+</html>

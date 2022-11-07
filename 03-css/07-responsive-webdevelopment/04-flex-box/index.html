@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex Box</title>
+  <style>
+    
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    /* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+    /* https://flexboxfroggy.com/ */
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      /* justify-content: flex-start; */
+      /* justify-content: flex-end; */
+      /* justify-content: space-between; */
+      /* justify-content: space-around; */
+      justify-content: space-evenly;
+      /* justify-content: center; */
+      align-items: flex-end
+    }
+
+    .box {
+      
+    }
+
+    .box1 {
+      background-color: aqua;
+      width: 250px;
+      height: 200px;
+    }
+
+    .box2 {
+      background-color:aquamarine;
+      width: 350px;
+      height: 350px;
+    }
+
+    .box3 {
+      background-color:blueviolet;
+      height: 300px;
+      width: 200px;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+  </div>
+</body>
+</html>
