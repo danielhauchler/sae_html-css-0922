@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Order</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+
+    .box {
+      font-size: 1.4rem;
+      color: #FFF;
+      padding: 20px 60px;
+    }
+    .box:first-child {
+      background: #e48616;
+      order: 1;
+    }
+    .box:nth-child(2) {
+      background: #e4dd16;
+      order: 2;
+    }
+    .box:last-child {
+      background: #169ee4;
+      order: 3
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+</body>
+</html>

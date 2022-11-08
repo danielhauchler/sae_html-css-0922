@@ -1,0 +1,23 @@
+.box {
+  height: 200px;
+}
+
+.blue {
+  background-color:aqua
+}
+
+.red {
+  background-color:crimson
+}
+
+.orange {
+  background-color:coral
+}
+
+.green {
+  background-color:aquamarine
+}
+
+.btn:hover {
+  cursor: move;
+}
