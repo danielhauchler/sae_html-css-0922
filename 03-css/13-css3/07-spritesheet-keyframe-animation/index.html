@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spritesheet Keyframe Animation</title>
+  <style>
+    #spritesheet {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+
+      width: 250px;
+      height: 170px;
+      background-image: url('spritesheet.png');
+      background-size: 1000px 170px;
+      background-position: 0 0;
+      box-sizing: border-box;
+      animation: spritesheetAnimation .5s steps(3) infinite;
+    }
+
+    @keyframes spritesheetAnimation {
+      from {
+        background-position-x: 0px;
+      }
+      to {
+        background-position-x: -752px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="spritesheet"></div>
+</body>
+</html>

@@ -5,8 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .icon {
+      width: 32px;
+      height: 32px;
+      overflow: hidden;
+      background-image: url('icon-sprite-sheet.png');
+      background-size: 476px, 476px;
+      /* border: 1px solid black; */
+    }
+
+    .icon-clock {
+      background-position: -96px 0;
+    }
+
+    .icon-checked {
+      background-position: -192px 0;
+    }
+  </style>
 </head>
 <body>
-  
+  <div class="icon icon-clock"></div>
+  <div class="icon icon-checked"></div>
 </body>
 </html>

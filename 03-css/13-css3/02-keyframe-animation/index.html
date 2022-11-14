@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyframe Animation</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: aqua;
+      animation: animatedBox 5s 2s infinite;
+      /* animation: colorSwitch 5s; */
+
+      /* animation-name: animatedBox;
+      animation-duration: 5s;
+      animation-delay: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: reverse;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; */
+    }
+
+    /* div:hover {
+      animation: animatedBox 5s 2s infinite;
+    } */
+
+    @keyframes animatedBox {
+      0% {
+        transform: translate(0px, 0px)
+      }
+
+      25% {
+        transform: translate(300px, 0px)
+      }
+
+      50% {
+        transform: translate(300px, 300px)
+      }
+
+      75% {
+        transform: translate(0px, 300px)
+      }
+
+      100% {
+        transform: translate(0px, 0px)
+      }
+    }
+
+    @keyframes colorSwitch {
+      from {
+        background-color: red;
+      }
+      to {
+        background-color: yellow;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>
