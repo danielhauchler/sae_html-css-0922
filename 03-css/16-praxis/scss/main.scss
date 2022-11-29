@@ -1,6 +1,8 @@
 // sass --watch scss/main.scss:css/style.css
 
 @import 'resetter';
+@import 'variables';
 @import 'global';
 @import 'grid';
 @import 'nav';
+@import 'hero-section';

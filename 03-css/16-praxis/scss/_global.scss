@@ -3,11 +3,10 @@ html {
 }
 
 body {
-  opacity: 0;
-  font-family: 'Lato', sans-serif;
-  color: #232323;
+  font-family: $font-default;
+  color: $primary-color;
 }
 
 a {
-  color: #232323;
+  color: $primary-color;
 }

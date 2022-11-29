@@ -49,8 +49,7 @@ html {
   font-size: 16px; }
 
 body {
-  opacity: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: #232323; }
 
 a {
@@ -59,7 +58,6 @@ a {
 .container {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid red;
   box-sizing: border-box; }
 
 @media (min-width: 576px) {
@@ -78,17 +76,97 @@ a {
   .container {
     max-width: 1320px; } }
 nav {
+  position: relative;
   display: flex;
-  justify-content: space-between; }
-  nav ul li {
-    display: inline-block; }
-    nav ul li a {
+  justify-content: space-between;
+  margin-top: 0; }
+  nav ul {
+    display: none;
+    width: 100vw;
+    height: 100vh; }
+    nav ul li {
+      display: inline-block; }
+      nav ul li a {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 100;
+        font-size: 1.3rem;
+        padding: 10px 60px; }
+        nav ul li a.active {
+          font-weight: 700; }
+  nav div {
+    display: none; }
+    nav div a {
       display: inline-block;
       text-decoration: none;
-      font-weight: 100;
-      font-size: 1.5rem;
-      padding: 10px 15px; }
-      nav ul li a:first-child {
-        padding-left: 0; }
+      font-weight: 700;
+      font-size: 1.3rem;
+      padding: 10px 40px;
+      border: 2px solid #232323;
+      border-radius: 10px;
+      white-space: nowrap; }
+  nav input {
+    opacity: 0;
+    z-index: 2;
+    position: absolute;
+    top: 30px;
+    right: 16px;
+    width: 50px;
+    height: 26px; }
+  nav input:checked ~ ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+  nav #hamburger-nav {
+    z-index: 1;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+    nav #hamburger-nav span {
+      display: inline-block;
+      width: 50px;
+      height: 6px;
+      border-radius: 3px;
+      background-color: #232323;
+      transition: .6s; }
+  nav input:checked ~ #hamburger-nav span:first-child {
+    transform: rotate(45deg) translate(8px, 7px); }
+  nav input:checked ~ #hamburger-nav span:nth-child(2) {
+    opacity: 0; }
+  nav input:checked ~ #hamburger-nav span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px); }
+  @media (min-width: 768px) {
+    nav ul {
+      display: block; }
+      nav ul li {
+        display: inline-block; }
+        nav ul li a {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: 100;
+          font-size: 1.3rem;
+          padding: 10px 60px; }
+          nav ul li a:first-child {
+            padding-left: 0; }
+          nav ul li a.active {
+            font-weight: 700; }
+        nav ul li:last-child {
+          display: none; }
+    nav div {
+      display: block; }
+    nav input {
+      display: none; } }
+  @media (min-width: 768px) {
+    nav #hamburger-nav {
+      display: none; } }
+
+@media (min-width: 768px) {
+  nav {
+    margin-top: 60px; } }
 
 /*# sourceMappingURL=style.css.map */
