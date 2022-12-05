@@ -55,10 +55,27 @@ body {
 a {
   color: #232323; }
 
+.btn {
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: inline-block; }
+
+.btn-default {
+  background-color: #000;
+  color: #fff; }
+
+.btn-border {
+  border: 2px solid #fff;
+  color: #fff; }
+
 .container {
   width: 100%;
   margin: 0 auto;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 0 10px; }
 
 @media (min-width: 576px) {
   .container {
@@ -80,22 +97,46 @@ nav {
   display: flex;
   justify-content: space-between;
   margin-top: 0; }
+  @media (min-width: 768px) {
+    nav {
+      margin-top: 60px; } }
   nav ul {
     display: none;
     width: 100vw;
     height: 100vh; }
+    @media (min-width: 768px) {
+      nav ul {
+        height: auto;
+        display: block; } }
     nav ul li {
       display: inline-block; }
+      @media (min-width: 768px) {
+        nav ul li {
+          display: inline-block; }
+          nav ul li:last-child {
+            display: none; } }
       nav ul li a {
         display: inline-block;
         text-decoration: none;
         font-weight: 100;
         font-size: 1.3rem;
         padding: 10px 60px; }
+        @media (min-width: 768px) {
+          nav ul li a {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 100;
+            font-size: 1.3rem;
+            padding: 10px 60px; }
+            nav ul li a:first-child {
+              padding-left: 0; } }
         nav ul li a.active {
           font-weight: 700; }
   nav div {
     display: none; }
+    @media (min-width: 768px) {
+      nav div {
+        display: block; } }
     nav div a {
       display: inline-block;
       text-decoration: none;
@@ -113,6 +154,9 @@ nav {
     right: 16px;
     width: 50px;
     height: 26px; }
+    @media (min-width: 768px) {
+      nav input {
+        display: none; } }
   nav input:checked ~ ul {
     display: flex;
     flex-direction: column;
@@ -127,6 +171,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: space-around; }
+    @media (min-width: 768px) {
+      nav #hamburger-nav {
+        display: none; } }
     nav #hamburger-nav span {
       display: inline-block;
       width: 50px;
@@ -136,37 +183,105 @@ nav {
       transition: .6s; }
   nav input:checked ~ #hamburger-nav span:first-child {
     transform: rotate(45deg) translate(8px, 7px); }
+    @media (min-width: 768px) {
+      nav input:checked ~ #hamburger-nav span:first-child {
+        padding-left: 0; } }
   nav input:checked ~ #hamburger-nav span:nth-child(2) {
     opacity: 0; }
   nav input:checked ~ #hamburger-nav span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px); }
-  @media (min-width: 768px) {
-    nav ul {
-      display: block; }
-      nav ul li {
-        display: inline-block; }
-        nav ul li a {
-          display: inline-block;
-          text-decoration: none;
-          font-weight: 100;
-          font-size: 1.3rem;
-          padding: 10px 60px; }
-          nav ul li a:first-child {
-            padding-left: 0; }
-          nav ul li a.active {
-            font-weight: 700; }
-        nav ul li:last-child {
-          display: none; }
-    nav div {
-      display: block; }
-    nav input {
-      display: none; } }
-  @media (min-width: 768px) {
-    nav #hamburger-nav {
-      display: none; } }
 
-@media (min-width: 768px) {
-  nav {
-    margin-top: 60px; } }
+#hero-section {
+  position: relative; }
+  #hero-section #hero-section-grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    margin-top: 20px;
+    text-align: center; }
+    @media (min-width: 768px) {
+      #hero-section #hero-section-grid {
+        grid-template-columns: 35% 55%;
+        grid-template-rows: auto;
+        gap: 10%;
+        margin-top: 0;
+        text-align: left; } }
+    #hero-section #hero-section-grid .flex-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      #hero-section #hero-section-grid .flex-wrap div h1 {
+        font-size: 3rem;
+        font-weight: 700; }
+        @media (min-width: 768px) {
+          #hero-section #hero-section-grid .flex-wrap div h1 {
+            font-size: 2rem; } }
+        @media (min-width: 960px) {
+          #hero-section #hero-section-grid .flex-wrap div h1 {
+            font-size: 4rem; } }
+      #hero-section #hero-section-grid .flex-wrap div p {
+        line-height: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 2rem; }
+    #hero-section #hero-section-grid #hero-section-image {
+      background-image: url("../images/hero-section-image.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      min-height: 400px;
+      margin-top: 2rem; }
+      @media (min-width: 728px) {
+        #hero-section #hero-section-grid #hero-section-image {
+          margin-top: 0; } }
+  #hero-section .hero-section-bg-images .hero-section-bg-image {
+    z-index: -1;
+    position: absolute;
+    bottom: 0; }
+  #hero-section .hero-section-bg-images .hero-section-bg-image-left {
+    left: 0; }
+  #hero-section .hero-section-bg-images .hero-section-bg-image-right {
+    right: 0; }
+
+.travel-logs {
+  position: relative;
+  background-color: #232323;
+  color: #fff;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center; }
+  .travel-logs .travel-logs-wrap {
+    max-width: 480px; }
+    .travel-logs .travel-logs-wrap h1 {
+      font-size: 3rem;
+      font-weight: 700; }
+    .travel-logs .travel-logs-wrap p {
+      line-height: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 2rem; }
+  .travel-logs .travel-logs-bg-images .travel-logs-bg-image {
+    width: 100px;
+    z-index: 0;
+    position: absolute;
+    bottom: 0; }
+    @media (min-width: 480px) {
+      .travel-logs .travel-logs-bg-images .travel-logs-bg-image {
+        width: 150px; } }
+    @media (min-width: 768px) {
+      .travel-logs .travel-logs-bg-images .travel-logs-bg-image {
+        width: 250px; } }
+    @media (min-width: 960px) {
+      .travel-logs .travel-logs-bg-images .travel-logs-bg-image {
+        width: 300px; } }
+    @media (min-width: 1200px) {
+      .travel-logs .travel-logs-bg-images .travel-logs-bg-image {
+        width: auto; } }
+  .travel-logs .travel-logs-bg-images .travel-logs-bg-image-left {
+    left: 0; }
+  .travel-logs .travel-logs-bg-images .travel-logs-bg-image-right {
+    right: 0; }
 
 /*# sourceMappingURL=style.css.map */

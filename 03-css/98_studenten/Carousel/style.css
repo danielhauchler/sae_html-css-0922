@@ -1,0 +1,124 @@
+body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slides {
+  width: 100%;
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides-item {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 100px;
+  height: 100vh;
+  justify-content: center;
+  margin: 0 1rem;
+  position: relative;
+  scroll-snap-align: start;
+  transform: scale(1);
+  transform-origin: center center;
+  transition: transform .5s;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel__nav {
+  padding: 1.25rem .5rem;
+}
+
+.slider-nav {
+  align-items: center;
+  background-color: #ddd;
+  border-radius: 50%;
+  color: #000;
+  display: inline-flex;
+  height: 1.5rem;
+  justify-content: center;
+  padding: .5rem;
+  position: relative;
+  text-decoration: none;
+  width: 1.5rem;
+}
+
+.slider-nav:hover,
+.slider-nav:active {
+  background-color: #000;
+  color: #fff;
+}
+
+.slide-1 {
+  background-image: url(img/Abstrakt1.svg);
+
+}
+
+.slide-2 {
+  background-image: url(img/Photo11.svg);
+}
+
+.slide-3 {
+  background-image: url(img/Photo12.svg);
+}
+
+.slide-4 {
+  background-image: url(img/Abstrakt.svg);
+}
+
+.slide-5 {
+  background-image: url(img/Photo9.svg);
+}
+
+.slide-6 {
+  background-image: url(img/Photo6.svg);
+}
+
+.slide-7 {
+  background-image: url(img/Photo5.svg);
+}
+
+.slide-8 {
+  background-image: url(img/Photo2.svg);
+}
+
+.slide-9 {
+  background-image: url(img/Photo1.svg);
+}
+
+.carousel__skip-link {
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+.carousel__skip-link:focus {
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  font-size: 30px;
+  height: 680px;
+  justify-content: center;
+  opacity: .8;
+  text-decoration: none;
+  width: 100%;
+  z-index: 1;
+}
