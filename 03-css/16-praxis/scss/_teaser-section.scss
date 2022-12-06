@@ -1,0 +1,43 @@
+.teaser-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  justify-content: center;
+  width: 100%;
+  padding-top: 2rem;
+
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .teaser {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+
+    @media (min-width: 768px) {
+      width: 30%;
+    }
+  }
+
+  h3 {
+    position: relative;
+
+    &::before {
+      content: " ";
+      background-color: black;
+      height: 3px;
+      width: 60px;
+      position: absolute;
+      top: -20px;
+      left: 0;
+
+
+    }
+  }
+
+
+}

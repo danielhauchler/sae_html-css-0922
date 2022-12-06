@@ -1,0 +1,32 @@
+.section-accordion {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: aqua;
+  padding: 3rem;
+  padding-top: 4rem;
+
+  div {
+
+    h3 {
+      font-family: $font-default;
+      font-size: 3rem;
+      font-weight: $font-bold;
+      margin: 0;
+    }
+
+    div {
+      .accordion-item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        h4 {}
+
+        svg {}
+      }
+    }
+
+  }
+
+}
